@@ -1,10 +1,10 @@
 # file-integrity-monitor
 
-Real-time file and directory integrity monitor with SQLite logging.
+Real-time file and directory integrity monitor.
 
 ## Why
 
-Detects unexpected or unauthorized changes to files by comparing their current state against a known-good baseline — the real-time layer that a full integrity-monitoring setup relies on, without needing a commercial product for personal machines, small servers, or dev environments.
+Unauthorized or unexpected file changes (a tampered config, a dropped malware binary, an accidental overwrite) are easy to miss until something breaks. Polling-based checks catch them late and cost CPU; commercial file-integrity tools are overkill for a personal machine, a small server, or a dev environment. This gives you the same real-time detection with near-zero overhead and a queryable audit trail (via `--log-db`), without the setup cost of a full commercial product.
 
 ## How it works
 
@@ -16,7 +16,7 @@ Detects unexpected or unauthorized changes to files by comparing their current s
    `--exclude`); filtered paths are dropped entirely and never reach the
    terminal or the database.
 3. Events that pass filtering are optionally written to SQLite in full
-   (`--log-db`), before any further noise reduction — so the database always
+   (`--log-db`), before any further noise reduction, so the database always
    has the complete, unfiltered record.
 4. For the terminal, directory-level `MODIFIED` events (usually just a side
    effect of a child file changing) are suppressed by default, and exact
