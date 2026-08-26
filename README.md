@@ -1,6 +1,6 @@
 # file-integrity-monitor
 
-Real-time file and directory integrity monitor
+Real-time file and directory integrity monitor.
 
 ## Why
 
@@ -58,10 +58,14 @@ options:
 
 ## Installation
 
-Requirements: Python 3.8+ and [`uv`](https://docs.astral.sh/uv/).
+Requirements: [`uv`](https://docs.astral.sh/uv/).
 
 ```bash
 uv tool install git+https://github.com/p4p2r0/file-integrity-monitor
+```
+
+```bash
+file-integrity-monitor
 ```
 
 ## License
