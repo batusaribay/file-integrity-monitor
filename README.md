@@ -61,7 +61,7 @@ options:
 Requirements: [`uv`](https://docs.astral.sh/uv/).
 
 ```bash
-uv tool install git+https://github.com/p4p2r0/file-integrity-monitor
+uv tool install git+https://github.com/batusaribay/file-integrity-monitor
 ```
 
 ```bash
